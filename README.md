@@ -1,16 +1,83 @@
-# React + Vite
+# LawPilot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page do LawPilot (Lexora AI), construida com React + Vite e estilizada com Tailwind CSS.
 
-Currently, two official plugins are available:
+## Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este repositorio contem a landing institucional do produto, com secoes de:
+- Hero
+- Desafios do mercado juridico
+- Funcionalidades
+- Como funciona
+- Casos de uso
+- Beneficios
+- Depoimentos
+- Planos
+- FAQ
+- CTA final
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 8
+- Tailwind CSS 3
+- Framer Motion
+- Radix UI
+- Lucide React
 
-## Expanding the ESLint configuration
+## Requisitos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js 18+
+- npm 9+
+
+## Como rodar localmente
+
+```bash
+npm install
+npm run dev
+```
+
+Aplicacao local: `http://localhost:5173`
+
+## Scripts
+
+- `npm run dev`: inicia ambiente de desenvolvimento
+- `npm run build`: gera build de producao em `dist/`
+- `npm run preview`: sobe preview local da build
+- `npm run lint`: executa ESLint
+
+## Estrutura principal
+
+```text
+src/
+  components/
+    layout/
+    sections/
+    ui/
+  data/
+  lib/
+```
+
+## Deploy no Vercel
+
+O projeto possui configuracao em `vercel.json` com:
+- framework: `vite`
+- comando de build: `npm run build`
+- pasta de saida: `dist`
+
+Fluxo rapido:
+
+```bash
+npm install -g vercel
+vercel
+```
+
+Para producao:
+
+```bash
+vercel --prod
+```
+
+## Licenca
+
+Uso interno / privado.
