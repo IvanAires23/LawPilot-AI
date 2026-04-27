@@ -54,7 +54,7 @@ function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="relative px-2 lg:col-span-5 lg:px-0"
+          className="relative px-2 pb-2 lg:col-span-5 lg:px-0 xl:pb-0"
           initial="hidden"
           animate="show"
           variants={fadeInUp}
@@ -106,7 +106,7 @@ function HeroSection() {
           </Card>
 
           <motion.div
-            className="absolute -left-4 top-10 rounded-xl border border-cyan-300/35 bg-slate-950/80 px-4 py-3 text-sm text-cyan-100 shadow-[0_18px_40px_-24px_rgba(34,211,238,0.85)] backdrop-blur md:-left-12"
+            className="absolute -left-12 top-14 z-20 hidden rounded-xl border border-cyan-300/35 bg-slate-950/85 px-4 py-3 text-sm text-cyan-100 shadow-[0_18px_40px_-24px_rgba(34,211,238,0.85)] backdrop-blur xl:block"
             animate={{ y: [0, -7, 0] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
           >
@@ -117,7 +117,7 @@ function HeroSection() {
           </motion.div>
 
           <motion.div
-            className="absolute -bottom-4 right-2 rounded-xl border border-violet-300/35 bg-slate-950/80 px-4 py-3 text-sm text-violet-100 shadow-[0_18px_40px_-24px_rgba(139,92,246,0.85)] backdrop-blur md:-right-9"
+            className="absolute -bottom-3 -right-10 z-20 hidden rounded-xl border border-violet-300/35 bg-slate-950/85 px-4 py-3 text-sm text-violet-100 shadow-[0_18px_40px_-24px_rgba(139,92,246,0.85)] backdrop-blur xl:block"
             animate={{ y: [0, 7, 0] }}
             transition={{ duration: 6.2, repeat: Infinity, ease: 'easeInOut' }}
           >
@@ -126,6 +126,21 @@ function HeroSection() {
               <span>87% faster case organization</span>
             </div>
           </motion.div>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:hidden">
+            <div className="rounded-xl border border-cyan-300/35 bg-slate-950/65 px-4 py-3 text-sm text-cyan-100 shadow-[0_12px_30px_-24px_rgba(34,211,238,0.85)]">
+              <div className="flex items-center gap-2">
+                <FileSearch className="h-4 w-4" />
+                <span>Document analyzed in 12 seconds</span>
+              </div>
+            </div>
+            <div className="rounded-xl border border-violet-300/35 bg-slate-950/65 px-4 py-3 text-sm text-violet-100 shadow-[0_12px_30px_-24px_rgba(139,92,246,0.85)]">
+              <div className="flex items-center gap-2">
+                <ChartNoAxesCombined className="h-4 w-4" />
+                <span>87% faster case organization</span>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

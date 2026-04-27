@@ -5,10 +5,9 @@
   ChartNoAxesCombined,
   Clock3,
   FileSearch,
-  Landmark,
   MessagesSquare,
-  Scale,
   ShieldCheck,
+  UserRound,
 } from 'lucide-react'
 
 export const navItems = [
@@ -94,23 +93,30 @@ export const steps = [
 export const useCases = [
   {
     icon: Briefcase,
-    title: 'Full-service law firms',
-    text: 'Manage large matter portfolios while increasing delivery speed and quality.',
+    title: 'For Law Firms',
+    benefits: [
+      'Reduce repetitive document work',
+      'Centralize case knowledge',
+      'Improve team productivity',
+    ],
+  },
+  {
+    icon: UserRound,
+    title: 'For Solo Attorneys',
+    benefits: [
+      'Save hours every week',
+      'Respond to clients faster',
+      'Keep every case organized',
+    ],
   },
   {
     icon: Building2,
-    title: 'In-house legal teams',
-    text: 'Respond faster to business demands while strengthening compliance controls.',
-  },
-  {
-    icon: Landmark,
-    title: 'High-volume litigation',
-    text: 'Automate triage, standardize arguments, and track productivity at scale.',
-  },
-  {
-    icon: Scale,
-    title: 'Specialized boutiques',
-    text: 'Increase analytical depth for strategic, high-value legal matters.',
+    title: 'For Business Teams',
+    benefits: [
+      'Review contracts faster',
+      'Track legal requests',
+      'Generate internal summaries',
+    ],
   },
 ]
 

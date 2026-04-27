@@ -2,7 +2,6 @@
 import SiteHeader from './components/layout/SiteHeader'
 import BenefitsSection from './components/sections/BenefitsSection'
 import ChallengesSection from './components/sections/ChallengesSection'
-import DashboardSection from './components/sections/DashboardSection'
 import FaqSection from './components/sections/FaqSection'
 import FeaturesSection from './components/sections/FeaturesSection'
 import FinalCtaSection from './components/sections/FinalCtaSection'
@@ -29,7 +28,6 @@ function App() {
         <HowItWorksSection />
         <UseCasesSection />
         <BenefitsSection />
-        <DashboardSection />
         <TestimonialsSection />
         <PricingSection />
         <FaqSection />
@@ -42,3 +40,5 @@ function App() {
 }
 
 export default App
+
+
