@@ -16,7 +16,6 @@ import {
   MessagesSquare,
   Scale,
   ShieldCheck,
-  Sparkles,
   Users,
   X,
 } from 'lucide-react'
@@ -59,34 +58,34 @@ const painPoints = [
 
 const features = [
   {
-    icon: Sparkles,
-    title: 'AI-guided legal research',
-    text: 'Get contextual answers grounded in legislation, precedents, and case strategy.',
+    icon: FileSearch,
+    title: 'AI Document Review',
+    text: 'Upload contracts, case files, and legal documents to receive summaries, risks, and key insights in seconds.',
+  },
+  {
+    icon: MessagesSquare,
+    title: 'Smart Client Intake',
+    text: 'Collect client information through automated forms and AI-guided conversations.',
+  },
+  {
+    icon: Briefcase,
+    title: 'Case Organization',
+    text: 'Keep cases, deadlines, documents, and client history organized in one secure workspace.',
   },
   {
     icon: Bot,
-    title: 'Drafting copilot',
-    text: 'Generate first drafts for motions, contracts, and legal opinions with consistent quality.',
+    title: 'Legal AI Assistant',
+    text: 'Ask questions, draft responses, and generate structured legal notes with contextual AI support.',
   },
   {
     icon: ChartNoAxesCombined,
-    title: 'Smart prioritization',
-    text: 'Rank workload by urgency, risk, and financial exposure for faster decisions.',
-  },
-  {
-    icon: Users,
-    title: 'Collaborative workflow',
-    text: 'Keep internal and external teams aligned in a single, auditable workspace.',
+    title: 'Automated Reports',
+    text: 'Create polished reports, summaries, and internal updates without repetitive manual work.',
   },
   {
     icon: ShieldCheck,
-    title: 'Data governance',
-    text: 'Apply access controls, audit trails, and policy standards for legal operations.',
-  },
-  {
-    icon: Gavel,
-    title: 'Standardization engine',
-    text: 'Build reusable argument libraries and templates to improve consistency across matters.',
+    title: 'Secure Workspace',
+    text: 'Built with privacy-first workflows for sensitive documents and professional teams.',
   },
 ]
 
@@ -459,11 +458,11 @@ function App() {
 
         <section id="solution" className="py-16">
           <SectionHeading
-            eyebrow="Platform"
-            title="A legal intelligence layer for your entire operation"
-            description="Built to support decision-making, accelerate execution, and raise legal quality standards."
+            eyebrow="Features"
+            title="Everything your legal workflow needs"
+            description="Six core capabilities designed to make legal operations faster, cleaner, and more reliable."
           />
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => {
               const Icon = feature.icon
               return (
@@ -475,7 +474,7 @@ function App() {
                   viewport={{ once: true, amount: 0.2 }}
                   variants={fadeInUp}
                 >
-                  <Card className="h-full border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-violet-300/40">
+                  <Card className="h-full border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-violet-300/40 hover:shadow-[0_20px_50px_-35px_rgba(34,211,238,0.7)]">
                     <CardHeader>
                       <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-violet-200">
                         <Icon className="h-5 w-5" />
