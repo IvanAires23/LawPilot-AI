@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   ArrowRight,
@@ -26,180 +26,181 @@ import { Button } from './components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card'
 
 const navItems = [
-  { label: 'Problemas', href: '#problemas' },
-  { label: 'Recursos', href: '#solucao' },
-  { label: 'Como funciona', href: '#como-funciona' },
-  { label: 'Casos de uso', href: '#casos' },
-  { label: 'Precos', href: '#precos' },
+  { label: 'Challenges', href: '#challenges' },
+  { label: 'Features', href: '#solution' },
+  { label: 'How it Works', href: '#how-it-works' },
+  { label: 'Use Cases', href: '#use-cases' },
+  { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
 ]
 
 const painPoints = [
   {
     icon: Clock3,
-    title: 'Prazos sob pressao',
-    text: 'Processos, audiencias e peticoes competem por tempo, aumentando risco operacional.',
+    title: 'Deadline pressure',
+    text: 'Cases, hearings, and filings compete for time, increasing operational risk.',
   },
   {
     icon: FileSearch,
-    title: 'Pesquisa juridica lenta',
-    text: 'Horas gastas para encontrar jurisprudencia relevante e montar argumentos solidos.',
+    title: 'Slow legal research',
+    text: 'Teams lose hours finding relevant precedents and building strong arguments.',
   },
   {
     icon: MessagesSquare,
-    title: 'Comunicacao fragmentada',
-    text: 'Informacoes espalhadas entre emails, planilhas e sistemas desconectados.',
+    title: 'Fragmented communication',
+    text: 'Critical information is scattered across email, spreadsheets, and disconnected tools.',
   },
   {
     icon: ShieldCheck,
-    title: 'Compliance sensivel',
-    text: 'Departamentos juridicos precisam equilibrar agilidade e rastreabilidade.',
+    title: 'Sensitive compliance',
+    text: 'Legal departments must balance speed, confidentiality, and traceability.',
   },
 ]
 
 const features = [
   {
     icon: Sparkles,
-    title: 'Pesquisa orientada por IA',
-    text: 'Respostas contextualizadas com base em leis, precedentes e estrategia processual.',
+    title: 'AI-guided legal research',
+    text: 'Get contextual answers grounded in legislation, precedents, and case strategy.',
   },
   {
     icon: Bot,
-    title: 'Copiloto para pecas',
-    text: 'Rascunhos de pecas, contratos e pareceres com linguagem juridica consistente.',
+    title: 'Drafting copilot',
+    text: 'Generate first drafts for motions, contracts, and legal opinions with consistent quality.',
   },
   {
     icon: ChartNoAxesCombined,
-    title: 'Priorizacao inteligente',
-    text: 'Painel com risco, urgencia e impacto financeiro para orientar decisoes rapidas.',
+    title: 'Smart prioritization',
+    text: 'Rank workload by urgency, risk, and financial exposure for faster decisions.',
   },
   {
     icon: Users,
-    title: 'Fluxo colaborativo',
-    text: 'Times internos e externos trabalham no mesmo contexto, com historico completo.',
+    title: 'Collaborative workflow',
+    text: 'Keep internal and external teams aligned in a single, auditable workspace.',
   },
   {
     icon: ShieldCheck,
-    title: 'Governanca de dados',
-    text: 'Controles de permissao, trilhas de auditoria e padroes para ambientes juridicos.',
+    title: 'Data governance',
+    text: 'Apply access controls, audit trails, and policy standards for legal operations.',
   },
   {
     icon: Gavel,
-    title: 'Motor de padronizacao',
-    text: 'Biblioteca de argumentos e templates para elevar consistencia entre casos.',
+    title: 'Standardization engine',
+    text: 'Build reusable argument libraries and templates to improve consistency across matters.',
   },
 ]
 
 const steps = [
   {
-    title: 'Conecte sua operacao',
-    text: 'Importe processos, contratos e bases internas em poucos minutos.',
+    title: 'Connect your legal operations',
+    text: 'Import cases, contracts, and internal knowledge sources in minutes.',
   },
   {
-    title: 'Defina politicas e metas',
-    text: 'Configure regras por area, nivel de risco e padroes de revisao.',
+    title: 'Set policies and goals',
+    text: 'Configure workflows by team, risk level, and review standards.',
   },
   {
-    title: 'Escalone com seguranca',
-    text: 'Receba insights acionaveis e execute mais com a equipe atual.',
+    title: 'Scale with confidence',
+    text: 'Turn insights into execution and deliver more with your existing team.',
   },
 ]
 
 const useCases = [
   {
     icon: Briefcase,
-    title: 'Escritorios full-service',
-    text: 'Organize grandes carteiras e acelere entregas sem perder qualidade tecnica.',
+    title: 'Full-service law firms',
+    text: 'Manage large matter portfolios while increasing delivery speed and quality.',
   },
   {
     icon: Building2,
-    title: 'Departamentos juridicos',
-    text: 'Reduza tempo de resposta para areas de negocio e fortaleça compliance interno.',
+    title: 'In-house legal teams',
+    text: 'Respond faster to business demands while strengthening compliance controls.',
   },
   {
     icon: Landmark,
-    title: 'Contencioso de massa',
-    text: 'Automatize triagem, padronize teses e monitore produtividade em escala.',
+    title: 'High-volume litigation',
+    text: 'Automate triage, standardize arguments, and track productivity at scale.',
   },
   {
     icon: Scale,
-    title: 'Boutiques especializadas',
-    text: 'Aumente profundidade analitica para casos estrategicos de alto valor.',
+    title: 'Specialized boutiques',
+    text: 'Increase analytical depth for strategic, high-value legal matters.',
   },
 ]
 
 const metrics = [
-  { value: '65%', label: 'menos tempo em pesquisa e preparacao de pecas' },
-  { value: '42%', label: 'ganho medio de produtividade por advogado' },
-  { value: '3,1x', label: 'mais casos tratados por equipe no trimestre' },
-  { value: '99,9%', label: 'historico rastreavel para auditoria e governanca' },
+  { value: '65%', label: 'less time spent on research and first drafts' },
+  { value: '42%', label: 'average productivity gain per attorney' },
+  { value: '3.1x', label: 'more matters handled per team each quarter' },
+  { value: '99.9%', label: 'traceable history for governance and audit' },
 ]
 
 const testimonials = [
   {
     name: 'Marina Araujo',
-    role: 'Socia, Araujo & Costa Advogados',
+    role: 'Partner, Araujo & Costa Law',
     quote:
-      'A LawPilot AI reduziu o tempo de elaboracao de pecas sem comprometer profundidade juridica.',
+      'Lexora AI cut drafting time significantly without compromising legal depth or quality.',
   },
   {
     name: 'Ricardo Mello',
-    role: 'Head Juridico, Vectra Energia',
+    role: 'Head of Legal, Vectra Energy',
     quote:
-      'Hoje o juridico entrega analise estrategica para o negocio com muito mais velocidade.',
+      'Our legal team now delivers strategic guidance to the business with much greater speed.',
   },
   {
     name: 'Camila Rocha',
-    role: 'Coordenadora de Contencioso, Nexo Legal',
-    quote: 'Conseguimos padronizar teses e priorizar riscos com um painel claro para toda a equipe.',
+    role: 'Litigation Coordinator, Nexo Legal',
+    quote:
+      'We standardized legal arguments and improved risk prioritization with a single clear dashboard.',
   },
 ]
 
 const plans = [
   {
     name: 'Starter',
-    price: 'R$ 399',
-    description: 'Para equipes pequenas iniciando automacao juridica.',
-    features: ['3 usuarios', 'Assistente de pesquisa', 'Templates basicos', 'Suporte por email'],
-    cta: 'Comecar agora',
+    price: '$399',
+    description: 'For small teams starting legal automation.',
+    features: ['3 users', 'Research assistant', 'Core templates', 'Email support'],
+    cta: 'Start now',
   },
   {
     name: 'Professional',
-    price: 'R$ 1.290',
-    description: 'Plano ideal para escritorios e departamentos em crescimento.',
-    features: ['15 usuarios', 'Copiloto para pecas', 'Painel de risco', 'Integracoes avancadas'],
-    cta: 'Solicitar demo',
+    price: '$1,290',
+    description: 'Ideal for growing law firms and legal departments.',
+    features: ['15 users', 'Drafting copilot', 'Risk dashboard', 'Advanced integrations'],
+    cta: 'Request demo',
     highlighted: true,
   },
   {
     name: 'Enterprise',
-    price: 'Sob consulta',
-    description: 'Operacoes juridicas complexas com requisitos corporativos.',
-    features: ['Usuarios ilimitados', 'SSO e trilha de auditoria', 'IA customizada', 'Gerente dedicado'],
-    cta: 'Falar com vendas',
+    price: 'Custom',
+    description: 'For complex legal operations with enterprise requirements.',
+    features: ['Unlimited users', 'SSO and audit trails', 'Custom AI models', 'Dedicated success manager'],
+    cta: 'Talk to sales',
   },
 ]
 
 const faqs = [
   {
-    question: 'A LawPilot AI substitui o advogado?',
+    question: 'Does Lexora AI replace attorneys?',
     answer:
-      'Nao. A plataforma funciona como copiloto para acelerar analise e redacao, mantendo validacao humana em todas as etapas criticas.',
+      'No. The platform acts as a copilot to accelerate analysis and drafting while keeping human legal review in critical decisions.',
   },
   {
-    question: 'Como ficam seguranca e confidencialidade?',
+    question: 'How do security and confidentiality work?',
     answer:
-      'A arquitetura inclui controle de acesso por perfil, trilha de auditoria e isolamento de dados por cliente ou unidade de negocio.',
+      'The platform includes role-based access control, complete audit trails, and data isolation by client or business unit.',
   },
   {
-    question: 'Quanto tempo leva para implementar?',
+    question: 'How long does implementation take?',
     answer:
-      'Times pequenos entram em operacao em poucos dias. Projetos enterprise seguem cronograma de integracao e governanca dedicado.',
+      'Small teams can go live in days. Enterprise deployments follow a structured integration and governance plan.',
   },
   {
-    question: 'Posso integrar com meu sistema juridico atual?',
+    question: 'Can I integrate it with my current legal systems?',
     answer:
-      'Sim. A LawPilot AI oferece conectores e API para sincronizar documentos, fluxos e metadados essenciais.',
+      'Yes. Lexora AI provides connectors and API support to sync documents, workflows, and critical metadata.',
   },
 ]
 
@@ -244,8 +245,8 @@ function App() {
               <Scale className="h-5 w-5" />
             </span>
             <div>
-              <p className="font-display text-lg font-bold text-white">LawPilot AI</p>
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Legal Intelligence</p>
+              <p className="font-display text-lg font-bold text-white">Lexora AI</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Legal Workspace</p>
             </div>
           </a>
 
@@ -258,9 +259,9 @@ function App() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Button variant="secondary">Entrar</Button>
+            <Button variant="secondary">Sign in</Button>
             <Button>
-              Agendar demo
+              Book demo
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
@@ -269,7 +270,7 @@ function App() {
             type="button"
             onClick={() => setMenuOpen((value) => !value)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-slate-100 lg:hidden"
-            aria-label="Abrir menu"
+            aria-label="Open menu"
           >
             {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -290,111 +291,142 @@ function App() {
               ))}
             </nav>
             <div className="mt-4 grid grid-cols-2 gap-3">
-              <Button variant="secondary">Entrar</Button>
-              <Button>Agendar demo</Button>
+              <Button variant="secondary">Sign in</Button>
+              <Button>Book demo</Button>
             </div>
           </div>
         )}
       </header>
 
       <main className="mx-auto max-w-7xl px-4 pb-24 pt-28 md:px-6">
-        <section id="hero" className="py-14 md:py-20">
-          <div className="grid items-center gap-12 lg:grid-cols-12">
+        <section id="hero" className="relative flex min-h-[78vh] items-center py-16 md:min-h-[84vh] md:py-24">
+          <div className="pointer-events-none absolute inset-0 -z-10 rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-900/90 via-[#0c1531] to-[#0a1125]" />
+          <div className="pointer-events-none absolute -left-20 top-20 -z-10 h-56 w-56 rounded-full bg-cyan-500/30 blur-[95px]" />
+          <div className="pointer-events-none absolute right-0 top-16 -z-10 h-56 w-56 rounded-full bg-violet-500/25 blur-[110px]" />
+
+          <motion.div
+            className="pointer-events-none absolute left-[9%] top-[15%] hidden h-10 w-10 rounded-lg border border-cyan-300/35 bg-cyan-400/10 md:block"
+            animate={{ y: [0, -8, 0], rotate: [0, 8, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className="pointer-events-none absolute right-[13%] top-[22%] hidden h-4 w-16 rounded-full bg-gradient-to-r from-cyan-300/20 to-transparent md:block"
+            animate={{ x: [0, 10, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+          />
+
+          <div className="grid items-center gap-14 lg:grid-cols-12">
             <motion.div
-              className="lg:col-span-7"
+              className="px-2 lg:col-span-7 lg:px-8"
               initial="hidden"
               animate="show"
               variants={fadeInUp}
               custom={0.1}
             >
-              <p className="mb-4 inline-flex rounded-full border border-violet-300/30 bg-violet-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-violet-200">
-                IA juridica para alta performance
+              <p className="mb-5 inline-flex rounded-full border border-cyan-300/35 bg-cyan-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">
+                Lexora AI Platform
               </p>
-              <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-                O copiloto juridico que transforma pesquisa em estrategia.
+              <h1 className="max-w-3xl text-4xl font-bold leading-[1.06] text-white sm:text-5xl md:text-6xl xl:text-7xl">
+                AI-powered legal workflows for modern teams
               </h1>
-              <p className="mt-6 max-w-2xl text-base text-slate-300 md:text-lg">
-                LawPilot AI acelera analise, redacao e governanca para advogados, escritorios e
-                departamentos juridicos que precisam entregar mais com confianca.
+              <p className="mt-7 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">
+                Automate client intake, analyze documents, organize cases, and generate legal insights
+                faster with a secure AI workspace built for legal professionals.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-10 flex flex-wrap gap-3">
                 <Button size="lg">
-                  Testar gratuitamente
+                  Start Free Trial
                   <ChevronRight className="h-5 w-5" />
                 </Button>
                 <Button size="lg" variant="secondary">
-                  Ver produto
+                  View Demo
                 </Button>
-              </div>
-
-              <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                {['+1.200 profissionais', '98% de satisfacao', 'Suporte especializado'].map((item) => (
-                  <div key={item} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200">
-                    {item}
-                  </div>
-                ))}
               </div>
             </motion.div>
 
             <motion.div
-              className="lg:col-span-5"
+              className="relative px-2 lg:col-span-5 lg:px-0"
               initial="hidden"
               animate="show"
               variants={fadeInUp}
               custom={0.25}
             >
-              <Card className="glow-ring overflow-hidden border-white/15">
+              <Card className="glow-ring overflow-hidden border-white/15 bg-gradient-to-b from-slate-900/85 to-[#0b1227]/95">
                 <CardHeader className="border-b border-white/10 pb-4">
                   <div className="mb-3 flex items-center justify-between">
-                    <p className="text-sm text-slate-300">Painel LawPilot AI</p>
+                    <p className="text-sm text-slate-300">Lexora AI Dashboard</p>
                     <span className="rounded-full border border-emerald-300/30 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200">
-                      Operacional
+                      Secure
                     </span>
                   </div>
-                  <CardTitle className="text-2xl text-white">Visao executiva do juridico</CardTitle>
+                  <CardTitle className="text-2xl text-white">Workspace overview</CardTitle>
                   <CardDescription>
-                    Processos prioritarios, previsao de risco e recomendacoes de proxima acao.
+                    Intake queue, document intelligence, and case workflow status in one place.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-5 pt-6">
                   <div className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
-                    <p className="text-xs uppercase tracking-[0.16em] text-slate-400">Risco agregado</p>
-                    <div className="mt-2 flex items-end justify-between">
-                      <p className="text-3xl font-bold text-white">28%</p>
-                      <p className="text-xs text-cyan-300">-14% em 30 dias</p>
+                    <div className="mb-2 flex items-center justify-between">
+                      <p className="text-xs uppercase tracking-[0.16em] text-slate-400">Current processing</p>
+                      <p className="text-xs text-cyan-300">Live</p>
                     </div>
-                    <div className="mt-4 h-2 rounded-full bg-white/10">
-                      <div className="h-2 w-[72%] rounded-full bg-gradient-to-r from-cyan-300 to-blue-500" />
+                    <div className="space-y-2">
+                      <div className="h-2 rounded-full bg-white/10">
+                        <div className="h-2 w-[82%] rounded-full bg-gradient-to-r from-cyan-300 to-blue-500" />
+                      </div>
+                      <div className="h-2 rounded-full bg-white/10">
+                        <div className="h-2 w-[61%] rounded-full bg-gradient-to-r from-violet-300 to-blue-500" />
+                      </div>
+                      <div className="h-2 rounded-full bg-white/10">
+                        <div className="h-2 w-[74%] rounded-full bg-gradient-to-r from-cyan-300 to-emerald-300" />
+                      </div>
                     </div>
                   </div>
 
                   <div className="grid gap-3 sm:grid-cols-2">
                     <div className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
-                      <p className="text-xs text-slate-400">Pecas sugeridas hoje</p>
-                      <p className="mt-2 text-2xl font-semibold text-white">37</p>
+                      <p className="text-xs text-slate-400">Open matters</p>
+                      <p className="mt-2 text-2xl font-semibold text-white">124</p>
                     </div>
                     <div className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
-                      <p className="text-xs text-slate-400">Prazos criticos</p>
-                      <p className="mt-2 text-2xl font-semibold text-white">5</p>
+                      <p className="text-xs text-slate-400">AI insights generated</p>
+                      <p className="mt-2 text-2xl font-semibold text-white">2,451</p>
                     </div>
-                  </div>
-
-                  <div className="rounded-xl border border-cyan-300/20 bg-cyan-400/5 p-4 text-sm text-slate-200">
-                    "Priorize o caso 09412-33. O modelo detectou alta chance de acordo favoravel nas
-                    proximas 72h."
                   </div>
                 </CardContent>
               </Card>
+
+              <motion.div
+                className="absolute -left-4 top-10 rounded-xl border border-cyan-300/35 bg-slate-950/80 px-4 py-3 text-sm text-cyan-100 shadow-[0_18px_40px_-24px_rgba(34,211,238,0.85)] backdrop-blur md:-left-12"
+                animate={{ y: [0, -7, 0] }}
+                transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <div className="flex items-center gap-2">
+                  <FileSearch className="h-4 w-4" />
+                  <span>Document analyzed in 12 seconds</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="absolute -bottom-4 right-2 rounded-xl border border-violet-300/35 bg-slate-950/80 px-4 py-3 text-sm text-violet-100 shadow-[0_18px_40px_-24px_rgba(139,92,246,0.85)] backdrop-blur md:-right-9"
+                animate={{ y: [0, 7, 0] }}
+                transition={{ duration: 6.2, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <div className="flex items-center gap-2">
+                  <ChartNoAxesCombined className="h-4 w-4" />
+                  <span>87% faster case organization</span>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
 
-        <section id="problemas" className="py-16">
+        <section id="challenges" className="py-16">
           <SectionHeading
-            eyebrow="Desafios reais"
-            title="A rotina juridica moderna exige mais velocidade e previsibilidade"
-            description="Equipes juridicas lidam com volume crescente, pressao por eficiencia e necessidade de mitigar riscos continuamente."
+            eyebrow="Real challenges"
+            title="Modern legal work demands speed, consistency, and predictability"
+            description="Legal teams handle growing volume while being accountable for business impact and risk reduction."
           />
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {painPoints.map((item, index) => {
@@ -425,11 +457,11 @@ function App() {
           </div>
         </section>
 
-        <section id="solucao" className="py-16">
+        <section id="solution" className="py-16">
           <SectionHeading
-            eyebrow="Plataforma"
-            title="Uma camada de inteligencia juridica para toda a operacao"
-            description="Recursos desenhados para apoiar decisao, acelerar execucao e elevar padrao tecnico do seu time."
+            eyebrow="Platform"
+            title="A legal intelligence layer for your entire operation"
+            description="Built to support decision-making, accelerate execution, and raise legal quality standards."
           />
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {features.map((feature, index) => {
@@ -460,11 +492,11 @@ function App() {
           </div>
         </section>
 
-        <section id="como-funciona" className="py-16">
+        <section id="how-it-works" className="py-16">
           <SectionHeading
-            eyebrow="Implementacao"
-            title="Como funciona em 3 passos"
-            description="Entrada simples, configuracao guiada e escala progressiva para gerar valor rapido."
+            eyebrow="Implementation"
+            title="How it works in 3 steps"
+            description="Simple onboarding, guided setup, and scalable execution from day one."
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {steps.map((step, index) => (
@@ -480,11 +512,11 @@ function App() {
           </div>
         </section>
 
-        <section id="casos" className="py-16">
+        <section id="use-cases" className="py-16">
           <SectionHeading
-            eyebrow="Aplicacoes"
-            title="Casos de uso que refletem o dia a dia da advocacia"
-            description="Do contencioso ao consultivo, a LawPilot AI se adapta a diferentes modelos de atuacao juridica."
+            eyebrow="Use cases"
+            title="Built for how legal teams actually operate"
+            description="From litigation to advisory work, Lexora AI adapts to your legal model."
           />
           <div className="grid gap-5 md:grid-cols-2">
             {useCases.map((item) => {
@@ -509,11 +541,11 @@ function App() {
           </div>
         </section>
 
-        <section id="beneficios" className="py-16">
+        <section id="benefits" className="py-16">
           <SectionHeading
-            eyebrow="Resultados"
-            title="Beneficios mensuraveis para eficiencia e controle"
-            description="Indicadores que mostram o impacto da IA juridica na produtividade e na previsibilidade da operacao."
+            eyebrow="Results"
+            title="Measurable gains in speed, quality, and control"
+            description="Trackable impact across productivity, risk management, and legal throughput."
           />
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {metrics.map((metric) => (
@@ -527,20 +559,20 @@ function App() {
 
         <section id="dashboard" className="py-16">
           <SectionHeading
-            eyebrow="Produto"
-            title="Dashboard projetado para lideranca juridica"
-            description="Visual claro de risco, produtividade e desempenho por area, cliente e tipo de processo."
+            eyebrow="Product"
+            title="A dashboard built for legal leadership"
+            description="Clear visibility into risk, productivity, and performance by team, client, and matter type."
           />
           <Card className="overflow-hidden border-white/15">
             <div className="grid gap-0 lg:grid-cols-12">
               <div className="border-b border-white/10 p-6 lg:col-span-4 lg:border-b-0 lg:border-r">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">Resumo semanal</p>
-                <h3 className="mt-3 text-2xl font-semibold text-white">Performance por frente</h3>
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">Weekly snapshot</p>
+                <h3 className="mt-3 text-2xl font-semibold text-white">Performance by practice area</h3>
                 <div className="mt-6 space-y-4">
                   {[
-                    ['Consultivo', '91%'],
-                    ['Contencioso estrategico', '84%'],
-                    ['Operacoes reguladas', '89%'],
+                    ['Advisory', '91%'],
+                    ['Strategic litigation', '84%'],
+                    ['Regulated operations', '89%'],
                   ].map(([label, value]) => (
                     <div key={label}>
                       <div className="mb-1 flex justify-between text-sm text-slate-300">
@@ -561,9 +593,9 @@ function App() {
               <div className="p-6 lg:col-span-8">
                 <div className="mb-6 grid gap-4 sm:grid-cols-3">
                   {[
-                    ['Pecas concluidas', '412'],
-                    ['Acordos fechados', '38'],
-                    ['Alertas criticos', '6'],
+                    ['Completed drafts', '412'],
+                    ['Agreements closed', '38'],
+                    ['Critical alerts', '6'],
                   ].map(([label, value]) => (
                     <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
                       <p className="text-xs text-slate-400">{label}</p>
@@ -573,7 +605,7 @@ function App() {
                 </div>
 
                 <div className="rounded-xl border border-white/10 bg-slate-950/40 p-4">
-                  <p className="mb-4 text-sm text-slate-300">Evolucao de produtividade (ultimos 6 meses)</p>
+                  <p className="mb-4 text-sm text-slate-300">Productivity trend (last 6 months)</p>
                   <div className="grid h-52 grid-cols-6 items-end gap-3">
                     {[28, 36, 41, 53, 62, 74].map((height, index) => (
                       <motion.div
@@ -592,11 +624,11 @@ function App() {
           </Card>
         </section>
 
-        <section id="depoimentos" className="py-16">
+        <section id="testimonials" className="py-16">
           <SectionHeading
-            eyebrow="Depoimentos"
-            title="Profissionais que ja escalam suas operacoes com LawPilot AI"
-            description="Relatos ficticios para representar o perfil de uso esperado da plataforma em diferentes contextos juridicos."
+            eyebrow="Testimonials"
+            title="Legal professionals scaling with Lexora AI"
+            description="Fictional testimonials crafted to represent realistic SaaS outcomes for legal teams."
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
@@ -611,11 +643,11 @@ function App() {
           </div>
         </section>
 
-        <section id="precos" className="py-16">
+        <section id="pricing" className="py-16">
           <SectionHeading
-            eyebrow="Planos"
-            title="Precificacao flexivel para cada maturidade juridica"
-            description="Comece rapido e evolua para governanca avancada conforme sua operacao cresce."
+            eyebrow="Pricing"
+            title="Flexible plans for every legal maturity stage"
+            description="Start fast and scale into advanced governance as your operation grows."
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {plans.map((plan) => (
@@ -629,13 +661,13 @@ function App() {
               >
                 {plan.highlighted && (
                   <p className="mb-4 inline-flex rounded-full border border-cyan-300/40 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">
-                    Mais escolhido
+                    Most popular
                   </p>
                 )}
                 <h3 className="text-2xl font-semibold text-white">{plan.name}</h3>
                 <p className="mt-2 text-sm text-slate-300">{plan.description}</p>
                 <p className="mt-6 text-4xl font-bold text-white">{plan.price}</p>
-                <p className="mt-1 text-sm text-slate-400">/mes</p>
+                <p className="mt-1 text-sm text-slate-400">/month</p>
                 <ul className="mt-6 space-y-3 text-sm text-slate-200">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
@@ -655,8 +687,8 @@ function App() {
         <section id="faq" className="py-16">
           <SectionHeading
             eyebrow="FAQ"
-            title="Perguntas frequentes"
-            description="Respostas objetivas para os pontos mais comuns antes da contratacao."
+            title="Frequently asked questions"
+            description="Quick answers to common questions before onboarding."
           />
           <Card className="mx-auto max-w-4xl border-white/10 px-6">
             <Accordion type="single" collapsible>
@@ -674,20 +706,20 @@ function App() {
           <Card className="glow-ring border-cyan-300/30 bg-gradient-to-r from-cyan-400/20 via-blue-500/15 to-violet-500/15 p-8 md:p-12">
             <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
               <div className="max-w-2xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-100">Pronto para escalar</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-100">Ready to scale</p>
                 <h2 className="mt-4 text-3xl font-bold text-white md:text-4xl">
-                  Transforme seu juridico em uma operacao orientada por inteligencia.
+                  Transform your legal team into an intelligence-driven operation.
                 </h2>
                 <p className="mt-4 text-slate-200">
-                  Veja como a LawPilot AI pode acelerar entregas e aumentar controle em poucas semanas.
+                  See how Lexora AI can increase throughput and control in just a few weeks.
                 </p>
               </div>
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                 <Button size="lg" className="sm:min-w-48">
-                  Agendar demonstracao
+                  Book a demo
                 </Button>
                 <Button size="lg" variant="outline" className="sm:min-w-48">
-                  Falar com especialista
+                  Talk to a specialist
                 </Button>
               </div>
             </div>
@@ -703,22 +735,22 @@ function App() {
                 <Scale className="h-5 w-5" />
               </span>
               <div>
-                <p className="font-display text-lg font-bold text-white">LawPilot AI</p>
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Legal Intelligence</p>
+                <p className="font-display text-lg font-bold text-white">Lexora AI</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Legal Workspace</p>
               </div>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
-              Plataforma ficticia para portfolio profissional. Criada para demonstrar design premium de
-              landing SaaS para o mercado juridico.
+              Fictional product built for professional portfolio use. Designed to showcase a premium
+              SaaS landing page for the legal market.
             </p>
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-white">Produto</p>
+            <p className="text-sm font-semibold text-white">Product</p>
             <ul className="mt-4 space-y-3 text-sm text-slate-400">
               <li>
-                <a href="#solucao" className="hover:text-cyan-300">
-                  Recursos
+                <a href="#solution" className="hover:text-cyan-300">
+                  Features
                 </a>
               </li>
               <li>
@@ -727,29 +759,29 @@ function App() {
                 </a>
               </li>
               <li>
-                <a href="#precos" className="hover:text-cyan-300">
-                  Planos
+                <a href="#pricing" className="hover:text-cyan-300">
+                  Pricing
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-white">Empresa</p>
+            <p className="text-sm font-semibold text-white">Company</p>
             <ul className="mt-4 space-y-3 text-sm text-slate-400">
               <li>
                 <a href="#" className="hover:text-cyan-300">
-                  Sobre
+                  About
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-cyan-300">
-                  Carreiras
+                  Careers
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-cyan-300">
-                  Contato
+                  Contact
                 </a>
               </li>
             </ul>
@@ -760,24 +792,24 @@ function App() {
             <ul className="mt-4 space-y-3 text-sm text-slate-400">
               <li>
                 <a href="#" className="hover:text-cyan-300">
-                  Privacidade
+                  Privacy
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-cyan-300">
-                  Termos
+                  Terms
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-cyan-300">
-                  Seguranca
+                  Security
                 </a>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-t border-white/10 py-6 text-center text-xs uppercase tracking-[0.14em] text-slate-500">
-          2026 LawPilot AI. Portfolio demo para Upwork.
+          2026 Lexora AI. Portfolio demo for Upwork.
         </div>
       </footer>
     </div>
@@ -785,3 +817,4 @@ function App() {
 }
 
 export default App
+
